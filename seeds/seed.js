@@ -10,7 +10,7 @@ const Movie = require('../models/Movies');
 const Showtime = require('../models/Showtimes');
 const Booking = require('../models/Bookings');
 
-mongoose.connect(process.env.MONGO_URI || process.env.MONGODB_URI || 'mongodb://localhost:27017/playground');
+mongoose.connect(process.env.MONGO_URI || process.env.MONGODB_URI || 'mongodb://mongo:27017/movie_db');
 
 const importData = async () => {
   try {
