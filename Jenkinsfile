@@ -8,7 +8,7 @@ pipeline {
                 git(
                     branch: 'master',
                     credentialsId: 'github-pat',
-                    url: 'https://github.com/detechtive/ticket-site-be.git'
+                    url: 'https://github.com/yusrilz/ticket-site-be.git'
                 )
             }
         }
