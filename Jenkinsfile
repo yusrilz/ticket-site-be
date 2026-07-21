@@ -6,7 +6,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 git(
-                    branch: 'main',
+                    branch: 'master',
                     credentialsId: 'github-pat',
                     url: 'https://github.com/detechtive/ticket-site-be.git'
                 )
