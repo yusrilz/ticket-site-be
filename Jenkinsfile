@@ -1,0 +1,35 @@
+pipeline {
+    agent any
+
+    stages {
+
+        stage('Checkout') {
+            steps {
+                git(
+                    branch: 'main',
+                    credentialsId: 'github-pat',
+                    url: 'https://github.com/detechtive/ticket-site-be.git'
+                )
+            }
+        }
+
+        stage('Build') {
+            steps {
+                sh 'docker compose build'
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                sh 'docker compose up -d'
+            }
+        }
+
+    }
+
+    post {
+        always {
+            sh 'docker image prune -f'
+        }
+    }
+}
