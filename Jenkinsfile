@@ -7,7 +7,7 @@ pipeline {
             steps {
                 git(
                     branch: 'master',
-                    credentialsId: 'github-pat',
+                    credentialsId: 'github-id',
                     url: 'https://github.com/yusrilz/ticket-site-be.git'
                 )
             }
