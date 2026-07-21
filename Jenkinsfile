@@ -25,6 +25,12 @@ pipeline {
             }
         }
 
+        stage('Run Seeds') {
+            steps {
+                sh 'docker compose exec -T app npm run seed'
+            }
+        }
+
     }
 
     post {
