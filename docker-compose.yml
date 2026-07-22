@@ -1,7 +1,7 @@
 services:
   app:
     build: .
-    container_name: ticketing-site
+    container_name: ticketing-site-backend
     restart: unless-stopped
     ports:
       - "3000:3000"
@@ -16,7 +16,6 @@ services:
 
   mongo:
     image: mongo:7
-    container_name: ticketing-mongo
     restart: unless-stopped
     ports:
       - "27017:27017"
